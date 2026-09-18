@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attendance Board</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>Attendance Board</span>
+      </div>
+      <div class="topbar-right">
+        <span id="clock" class="clock"></span>
+        <a class="btn btn-secondary btn-small" href="/dashboard">Sign in to clock</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="board-header">
+      <h1>Live Attendance</h1>
+      <span id="meta" class="badge badge-neutral"></span>
+    </div>
+    <p id="error" class="error" hidden></p>
+    <div id="board" class="board"></div>
+    <footer class="foot muted">Public read-only view. Clock in/out requires a Google account.</footer>
+  </main>
+
+  <script type="module" src="/js/public.js"></script>
+</body>
+</html>

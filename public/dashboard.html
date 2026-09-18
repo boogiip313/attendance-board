@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Attendance</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>Attendance</span>
+      </div>
+      <div class="topbar-right">
+        <span id="email" class="muted"></span>
+        <a class="btn btn-secondary btn-small" href="/">Public board</a>
+        <a class="btn btn-small" href="/auth/logout">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="profile">
+      <h1 id="name">...</h1>
+      <p class="muted">Rank: <strong id="rank">...</strong></p>
+    </div>
+
+    <p id="error" class="error" hidden></p>
+
+    <section id="statusCard" class="card status out">
+      <span id="statusText" class="badge out">OFF DUTY</span>
+      <p id="statusTime" class="muted">Not clocked in</p>
+      <p id="elapsed" class="elapsed"></p>
+      <button id="clockBtn" class="btn btn-primary btn-big">Clock In</button>
+      <p id="clockNote" class="muted note"></p>
+    </section>
+
+    <section class="card">
+      <h2>Rank</h2>
+      <p class="muted">Set the rank shown on the public board.</p>
+      <form id="rankForm" autocomplete="off">
+        <input id="rankInput" class="rank-input" type="text" maxlength="80" placeholder="e.g. Captain, Sgt., Team Lead..." />
+        <button class="btn btn-primary btn-small" type="submit">Save rank</button>
+      </form>
+    </section>
+
+    <section id="adminSection" class="card" hidden>
+      <h2>Admin &mdash; Manage ranks</h2>
+      <div id="adminList"></div>
+    </section>
+
+    <footer class="foot muted">Only you can see this page.</footer>
+  </main>
+
+  <script type="module" src="/js/dashboard.js"></script>
+</body>
+</html>
